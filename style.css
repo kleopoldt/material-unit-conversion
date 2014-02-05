@@ -80,3 +80,9 @@ html {
 	background-color: #FFD640;
 	color: black;
 }
+
+#answer {
+	font-size: 2em;
+	margin-top: 20px;
+	text-align: center;
+}

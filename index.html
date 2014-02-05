@@ -20,7 +20,7 @@
 					<input id="hard" type="radio" name="prop" value="hard" >Hardness
 				</div>
 				<div class = "col2">
-					<input id="charpy"type="radio" name="prop" value="charpy" >Charpy Impact Energy
+					<input id="charpy" type="radio" name="prop" value="charpy" >Charpy Impact Energy
 					<input id="temp" type="radio" name="prop" value="temp" >Temperature
 					<input id="dia" type="radio" name="prop" value="dia" >Dia. / Length
 					<input id="pren" type="radio" name="prop" value="pren" >PREN
@@ -67,8 +67,14 @@
 				<option class="dia" value="mm" style="">Millimetres</option>
 				</select>
 			</div>
+			<div class="PRENs">
+				<label>Cr: </label><input type="text" id="Cr" name="Cr" value="" />
+				<label>Mo: </label><input type="text" id="Mo" name="Mo" value="" /><br>
+				<label>N: </label><input type="text" id="N" name="N" value="" />
+				<label>W: </label><input type="text" id="W" name="W" value="" />
+			</div>
 			<div class="value_input">
-				Value: <input type="text" id="userInput" name="userInput">
+				<label>Value: </label><input type="text" id="userInput" name="userInput">
 				<input id="convert" type="submit" value="Convert">
 			</div>
 		</form>
