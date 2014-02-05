@@ -1,0 +1,82 @@
+/*Langley Blue = #1C3E95*/
+
+*{
+	font-family: Tahoma, sans-serif;
+	color: white;
+	box-sizing: border-box;
+}
+
+html {
+	background: white /*#1C3E95*/;
+}
+
+.wrap {
+	width: 65%;
+	margin: auto;
+	background: #335DC7;
+	padding: 3% 7% 15% 7%;
+	border-radius: 20px;
+	box-shadow: 3px 3px 10px #1C3E95 /*#290A87*/;
+	
+}
+
+.heading h1 {
+	font-variant: small-caps;
+	letter-spacing: .25rem;
+}
+
+.heading {
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.heading h3 {
+	font-style: italic;
+	font-size: 1.2rem;
+	margin-bottom: 5rem;
+	margin-top: -1rem;
+	font-family: Palatina;
+}
+
+#radio_input {
+	text-align: center;
+	margin-bottom: 5rem;
+	font-size: 1.2rem;
+}
+
+.unit_input {
+	text-align: center;
+	margin-bottom: 5rem;
+	font-size: 1.5rem;
+	font-variant: small-caps;
+}
+
+.unit_input select {
+	background-color: #FFD640;
+	color: black;
+}
+
+.unit_input option {
+	background-color: #FFD640;
+	color: black;
+}
+
+.value_input {
+	text-align: center;
+	font-size: 1.5rem;
+	font-variant: small-caps;
+}
+
+.value_input input {
+	background-color: #FFD640;
+	color: black;
+}
+
+.value_input input:focus {
+	background-color: #FFE173;
+}
+
+#convert {
+	background-color: #FFD640;
+	color: black;
+}
