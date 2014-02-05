@@ -67,12 +67,12 @@ html {
 	font-variant: small-caps;
 }
 
-.value_input input {
+input {
 	background-color: #FFD640;
 	color: black;
 }
 
-.value_input input:focus {
+input:focus {
 	background-color: #FFE173;
 }
 
