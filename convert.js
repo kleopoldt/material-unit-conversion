@@ -78,6 +78,14 @@ function convert(start, end) {
 		return (userInput - 32) * 5/9; 
 	} else if (start == 'degc' && end == 'degf') {
 		return (userInput * 9/5) + 32;
+	} else if (start == 'mpa' && end == 'ksi') {
+		return (userInput / 4.448222*25.4*25.4 / 1000);
+	} else if (start == 'ksi' && end == 'mpa') {
+		return ((userInput * 4.448222) / (25.4*25.4) * 1000);
+	} else if (start == 'hrc' && end == 'bhn') {
+		return ((userInput * 5.97 + 104.7));
+	} else if (start == 'bhn' && end == 'hrc') {
+		return (18.1673 + (0.120388 * userInput) - 0.0000694388 * (userInput * userInput) - (4883.27 / userInput));
 	}
 }
 
