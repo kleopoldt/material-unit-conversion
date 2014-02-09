@@ -10,11 +10,20 @@ html {
 	background: white /*#1C3E95*/;
 }
 
+label {
+	margin-left: 15px;
+}
+
+input[type="radio"] {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
 .wrap {
 	width: 65%;
 	margin: auto;
 	background: #335DC7;
-	padding: 3% 7% 15% 7%;
+	padding: 3% 7% 10% 7%;
 	border-radius: 20px;
 	box-shadow: 3px 3px 10px #1C3E95 /*#290A87*/;
 	
@@ -42,6 +51,11 @@ html {
 	text-align: center;
 	margin-bottom: 5rem;
 	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.col1 {
+	margin-bottom: 10px;
 }
 
 .unit_input {
@@ -54,6 +68,7 @@ html {
 .unit_input select {
 	background-color: #FFD640;
 	color: black;
+	font-size: 1.2rem;
 }
 
 .unit_input option {
@@ -67,9 +82,27 @@ html {
 	font-variant: small-caps;
 }
 
+.PRENs {
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 1.5rem;
+}
+
+.PRENs p {
+	text-align: center;
+	font-size: 1.5rem;
+	font-variant: small-caps;
+}
+
 input {
 	background-color: #FFD640;
 	color: black;
+	border-radius: 5px;
+	font-size: 1.2rem;
+}
+
+input[type="text"] {
+	width: 100px;
 }
 
 input:focus {
@@ -83,6 +116,12 @@ input:focus {
 
 #answer {
 	font-size: 2em;
-	margin-top: 20px;
+	color: black;
+	margin-top: 35px;
 	text-align: center;
+	background-color: #FFD640;
+	border-radius: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
 }

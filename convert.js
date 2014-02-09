@@ -14,9 +14,9 @@ $('input[name=prop]').click( function() {
 
 $('#MTR').submit( function (e) {
 	if ( $('#pren').is(':checked') ) {
-		var answer = convertPREN(parseFloat($('#Cr').val()),parseFloat($('#Mo').val()),parseFloat($('#N').val()),parseFloat($('#W').val()));
+		var answer = convertPREN(parseFloat($('#Cr').val()),parseFloat($('#Mo').val()),parseFloat($('#N').val()),parseFloat($('#W').val())).toFixed(2);
 	} else { 
-		var answer = convert($('.startUnits').val(), $('.endUnits').val());
+		var answer = convert($('.startUnits').val(), $('.endUnits').val()).toFixed(2);
 	}
 	$('#answer').html(answer);
 	e.preventDefault();
@@ -94,3 +94,6 @@ function convertPREN(Cr,Mo,N,W) {
 }
 
 $("#ysts").trigger("click");
+
+//use keyup method to determine when data is entered... real-time conversions
+//use +$(...) to convert string to number (the +)
