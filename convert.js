@@ -14,9 +14,9 @@ $('input[name=prop]').click( function() {
 
 $('#MTR').submit( function (e) {
 	if ( $('#pren').is(':checked') ) {
-		var answer = convertPREN(parseFloat($('#Cr').val()),parseFloat($('#Mo').val()),parseFloat($('#N').val()),parseFloat($('#W').val())).toFixed(2);
+		var answer = convertPREN(parseFloat($('#Cr').val()),parseFloat($('#Mo').val()),parseFloat($('#N').val()),parseFloat($('#W').val()));
 	} else { 
-		var answer = convert($('.startUnits').val(), $('.endUnits').val()).toFixed(2);
+		var answer = convert($('.startUnits').val(), $('.endUnits').val())
 	}
 	$('#answer').html(answer);
 	e.preventDefault();
@@ -70,27 +70,36 @@ $('.endUnits, .startUnits').find('option').remove();
 //conversions... finish adding all. This could probably be built better without 'ifs'
 function convert(start, end) {
 	var userInput = parseFloat($('#userInput').val());
+	var unitType = $(".endUnits option:selected").text();
 	if (start == 'inch' && end == 'mm') {
-		return userInput * 25.4;
+		return (userInput * 25.4).toFixed(2) + " " + unitType;
 	} else if (start == 'mm' && end == 'inch') {
-		return userInput / 25.4;
-	} else if (start == 'degf' && end == 'degc') {
-		return (userInput - 32) * 5/9; 
-	} else if (start == 'degc' && end == 'degf') {
-		return (userInput * 9/5) + 32;
+		return (userInput / 25.4).toFixed(2) + " " + unitType;
 	} else if (start == 'mpa' && end == 'ksi') {
-		return (userInput / 4.448222*25.4*25.4 / 1000);
+		return (userInput / 4.448222*25.4*25.4 / 1000).toFixed(2) + " " + unitType;
 	} else if (start == 'ksi' && end == 'mpa') {
-		return ((userInput * 4.448222) / (25.4*25.4) * 1000);
+		return ((userInput * 4.448222) / (25.4*25.4) * 1000).toFixed(2) + " " + unitType;
+	} else if (start == '4d' && end == '5.65') {
+		return (userInput * 0.799).toFixed(2) + "% " + unitType;
+	} else if (start == '5.65' && end == '4d') {
+		return (userInput * 1.252).toFixed(2) + "% " + unitType;
 	} else if (start == 'hrc' && end == 'bhn') {
-		return ((userInput * 5.97 + 104.7));
+		return ((userInput * 5.97 + 104.7)).toFixed(2) + " " + unitType;
 	} else if (start == 'bhn' && end == 'hrc') {
-		return (18.1673 + (0.120388 * userInput) - 0.0000694388 * (userInput * userInput) - (4883.27 / userInput));
+		return (18.1673 + (0.120388 * userInput) - 0.0000694388 * (userInput * userInput) - (4883.27 / userInput)).toFixed(2) + " " + unitType;
+	} else if (start == 'ftlbs' && end == 'joules') {
+		return (userInput * 1.35581795).toFixed(2) + " " + unitType; 
+	} else if (start == 'joules' && end == 'ftlbs') {
+		return (userInput * 0.7375621482).toFixed(2) + " " + unitType; 
+	} else if (start == 'degf' && end == 'degc') {
+		return ((userInput - 32) * 5/9).toFixed(2) + " " + unitType; 
+	} else if (start == 'degc' && end == 'degf') {
+		return ((userInput * 9/5) + 32).toFixed(2) + " " + unitType;
 	}
 }
 
 function convertPREN(Cr,Mo,N,W) {
-	return Cr + (3.3 * (Mo + (0.5 * W))) + 16 * N;
+	return (Cr + (3.3 * (Mo + (0.5 * W))) + 16 * N).toFixed(2) + " PREN";
 }
 
 $("#ysts").trigger("click");
